@@ -10,6 +10,4 @@ RUN pip install -r requirements.txt
 ENV JWT_SECRET="hello"
 ENV LOG_LEVEL="DEBUG"
 
-EXPOSE 8080
-
 ENTRYPOINT ["gunicorn", "-b", ":8080", "main:APP"]
